@@ -1,5 +1,5 @@
 package com.epam.pizza.model.products;
 
-public enum ingridients {
+public enum Ingredients {
     CHEESE,TOMATO,MEAT,PEPERONI,PICKLE,PARMESAN,MOZZARELLA,CHICKEN
 }
