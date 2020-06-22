@@ -40,6 +40,31 @@ public class Order {
         this.payMethod = payMethod;
     }
 
+    public List<product> getProducts() {
+        return products;
+    }
 
+    public String getName() {
+        return name;
+    }
 
+    public String getPhoneNumber() {
+        return phoneNumber;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public PayMethod getPayMethod() {
+        return payMethod;
+    }
+
+    public int sum() {
+       int sum=0;
+       for (product product : products) {
+           sum += product.getValue();
+       }
+       return sum;
+    }
 }
