@@ -62,37 +62,33 @@ public class Order {
     }
 
     public int sum() {
-       int sum=0;
-       for (product product : products) {
-           sum += product.getValue();
-       }
-       return sum;
+        int sum = 0;
+        for (product product : products) {
+            sum += product.getValue();
+        }
+        return sum;
     }
 
     public boolean addProduct(product newProduct) {
-       if ((newProduct instanceof pizza) && (amountOfPizza<5))
-       {
-           amountOfPizza+=1;
-           products.add(newProduct);
-           return true;
-       }
-       else {
-           if (amountOfDrinks<4)
-           {
-               amountOfDrinks+=1;
-               products.add(newProduct);
-               return true;
-           }
-       }
-       return false;
+        if ((newProduct instanceof pizza) && (amountOfPizza < 5)) {
+            amountOfPizza += 1;
+            products.add(newProduct);
+            return true;
+        } else {
+            if (amountOfDrinks < 4) {
+                amountOfDrinks += 1;
+                products.add(newProduct);
+                return true;
+            }
+        }
+        return false;
     }
 
     public void deleteProduct(product oldProduct) {
         if (products.remove(oldProduct)) {
             if (oldProduct instanceof pizza) {
                 amountOfPizza--;
-            }
-            else {
+            } else {
                 amountOfDrinks--;
             }
         }
