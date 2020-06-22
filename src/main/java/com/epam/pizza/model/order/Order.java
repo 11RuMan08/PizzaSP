@@ -1,5 +1,6 @@
 package com.epam.pizza.model.order;
 
+import com.epam.pizza.model.products.pizza;
 import com.epam.pizza.model.products.product;
 
 import java.util.ArrayList;
@@ -67,4 +68,35 @@ public class Order {
        }
        return sum;
     }
+
+    public boolean addProduct(product newProduct) {
+       if ((newProduct instanceof pizza) && (amountOfPizza<5))
+       {
+           amountOfPizza+=1;
+           products.add(newProduct);
+           return true;
+       }
+       else {
+           if (amountOfDrinks<4)
+           {
+               amountOfDrinks+=1;
+               products.add(newProduct);
+               return true;
+           }
+       }
+       return false;
+    }
+
+    public void deleteProduct(product oldProduct) {
+        if (products.remove(oldProduct)) {
+            if (oldProduct instanceof pizza) {
+                amountOfPizza--;
+            }
+            else {
+                amountOfDrinks--;
+            }
+        }
+    }
 }
+
+
