@@ -31,6 +31,8 @@ FOREIGN KEY(pizza_ID) REFERENCES pizza(pizza_ID),
 FOREIGN KEY(ingredient_id) REFERENCES Ingredients(ingredient_id)
 );
 
+
+
 -- insert into pizza_and_ingredients (id,pizza_ID,ingredient_id) VALUES (1,1,1),(2,1,3),(3,1,8),(4,1,2),(5,1,4),(6,2,1),(7,2,4),(8,2,8),(9,3,1),(10,3,2),(11,3,3),(12,4,1),(13,4,8),(14,4,4);
 -- insert into Ingredients (ingredient_id,name_of_ingredient) VALUES (1,'CHEESE'),(2,'TOMATO'),(3,'MEAT'),(4,'PEPERONI'),(5,'PICKLE'),(6,'PARMESAN'),(7,'MOZZARELLA'),(8,'CHICKEN');
 -- insert into payMethod (payMethod_id,name_of_payMethod) VALUES (1,'CARD'),(2,'CASH');
