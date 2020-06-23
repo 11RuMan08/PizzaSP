@@ -1,7 +1,5 @@
 package com.epam.pizza.controller;
 
-import com.epam.pizza.model.order.Order;
-import com.epam.pizza.model.order.PayMethod;
 import com.epam.pizza.model.products.Drink;
 import com.epam.pizza.model.products.pizza;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -20,7 +18,7 @@ public class OrderController {
     public String helloWorld() {
         return HELLO_WORLD;
     }
-
+/*
     @GetMapping("/GetProducts")
     public List getProducts() {
         return null;
@@ -38,6 +36,7 @@ public class OrderController {
     public PayMethod getPayMethod(Order order) {
        return order.getPayMethod();
     }
+ */
 
     @GetMapping("/GetDrinkInfo")
     public List getDrinkInfo(Drink drink) {
@@ -58,12 +57,12 @@ public class OrderController {
         info.add(prod.getNutritionalValue());
         return info;
     }
-
+/*
     @GetMapping("/GetPizzaIngredients")
     public List getPizzaIngredients(pizza prod) {
         return prod.getIngredients();
     }
-
+*/
 
     @PostMapping("/CreateOrder")
     public boolean createOrder() {
