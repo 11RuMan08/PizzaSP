@@ -7,7 +7,7 @@ public enum Ingredients {
     TOMATO_SAUCE("Томатный соус"),
     CHORIZA("Охотьничьи колбаски"),
     MOZZARELLA("Моцарелла"),
-    LARGE_PORTION_OF_MOZZARELLA("Много моцареллы"),
+    BIG_MOZZARELLA("Много моцареллы"),
     MIX_OF_CHEDDAR_AND_PARMESAN("Микс чеддар и пармезан"),
     BLUE_CHEESE("Дор Блю"),
     CREAM_SAUCE("Сметана"),
